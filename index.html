@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Harmless cyber virus simulation">
+  <title>VIRUS SIMULATOR</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Scanlines / visual effect -->
+  <div class="scanlines"></div>
+
+  <!-- Main application -->
+  <main class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="status-dot"></span>
+        VIRUS_SIMULATOR
+      </div>
+
+      <div class="simulation-label">
+        ⚠ SIMULATION MODE
+      </div>
+    </header>
+
+    <section class="hero">
+
+      <div class="warning-icon">
+        ☣
+      </div>
+
+      <p class="small-title">SECURITY SYSTEM</p>
+
+      <h1 class="glitch" data-text="SYSTEM INFECTED">
+        SYSTEM INFECTED
+      </h1>
+
+      <p class="description">
+        Suspicious activity has been detected during the simulated
+        security scan.
+      </p>
+
+      <div class="simulation-badge">
+        <span>●</span>
+        VISUAL SIMULATION ONLY
+      </div>
+
+    </section>
+
+    <!-- Fake scan -->
+    <section class="panel">
+
+      <div class="panel-header">
+        <span>THREAT ANALYSIS</span>
+        <span id="scanPercent">0%</span>
+      </div>
+
+      <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <div class="scan-info">
+        <span id="scanStatus">Initializing scan...</span>
+        <span id="filesScanned">0 / 8,742</span>
+      </div>
+
+    </section>
+
+    <!-- Threat cards -->
+    <section class="threat-grid">
+
+      <div class="threat-card">
+        <span class="card-icon">☠</span>
+        <div>
+          <small>THREATS</small>
+          <strong id="threatCount">0</strong>
+        </div>
+      </div>
+
+      <div class="threat-card">
+        <span class="card-icon">⚡</span>
+        <div>
+          <small>RISK LEVEL</small>
+          <strong id="riskLevel">LOW</strong>
+        </div>
+      </div>
+
+      <div class="threat-card">
+        <span class="card-icon">◉</span>
+        <div>
+          <small>SCAN STATUS</small>
+          <strong id="statusText">ACTIVE</strong>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Terminal -->
+    <section class="terminal-panel">
+
+      <div class="terminal-header">
+        <span>● TERMINAL</span>
+
+        <div class="terminal-buttons">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="terminal" class="terminal">
+        <div class="terminal-line">
+          <span class="prompt">root@simulator:~$</span>
+          Initializing visual security engine...
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Controls -->
+    <section class="controls">
+
+      <button id="startBtn" class="btn primary">
+        ▶ START SIMULATION
+      </button>
+
+      <button id="stopBtn" class="btn danger">
+        ■ STOP
+      </button>
+
+      <button id="resetBtn" class="btn">
+        ↻ RESET
+      </button>
+
+    </section>
+
+    <!-- Disclaimer -->
+    <footer>
+      <div class="safe-message">
+        🛡️ HARMLESS DEMO — NO REAL VIRUS
+      </div>
+
+      <p>
+        This website only creates visual effects for demonstration,
+        entertainment and testing.
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- Fake alert -->
+  <div id="alertBox" class="alert-box">
+
+    <div class="alert-icon">⚠</div>
+
+    <div>
+      <strong>SIMULATION ALERT</strong>
+      <p id="alertMessage">
+        Visual threat detected.
+      </p>
+    </div>
+
+    <button id="closeAlert">×</button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+  </html>
